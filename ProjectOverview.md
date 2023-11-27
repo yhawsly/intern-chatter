@@ -58,7 +58,7 @@ Intern Chatter is a web application designed to facilitate the sharing and inter
 2. **Setup:**
 
    - Install project dependencies using `npm install`.
-   - Run the development server using `npm start` to preview the application.
+   - Run the development server using `npm run dev` to preview the application.
 
 3. **Code Structure:**
 
