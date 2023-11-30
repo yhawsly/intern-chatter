@@ -1,11 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FaTimes, FaHome } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineTravelExplore } from "react-icons/md";
-import { RiAccountCircleFill } from "react-icons/ri";
-import { FcAbout } from "react-icons/fc";
-
 
 const Nav = () => {
   const [click, setClick] = useState(false);
@@ -35,7 +32,9 @@ const Nav = () => {
                   spy={true}
                   smooth={true}
                   to="Home"
-                  className="hover:text-fuchsia-600 transition cursor-pointer font-bold"
+                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
+                    click ? "text-white" : "text-white"
+                  }`}
                 >
                   Home
                 </Link>
@@ -45,7 +44,9 @@ const Nav = () => {
                   spy={true}
                   smooth={true}
                   to="Explore"
-                  className="hover:text-fuchsia-600 transition cursor-pointer font-bold"
+                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
+                    click ? "text-white" : "text-white"
+                  }`}
                 >
                   Explore
                 </Link>
@@ -55,21 +56,23 @@ const Nav = () => {
                   spy={true}
                   smooth={true}
                   to="About"
-                  className="hover:text-fuchsia-600 transition cursor-pointer font-bold"
+                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
+                    click ? "text-white" : "text-white"
+                  }`}
                 >
                   About
                 </Link>
               </li>
               <li>
-                <Link spy={true} smooth={true} to="Login/SignUp">
-                  <div className="flex items-center 1">
-                    <span className="hover:text-fuchsia-600 transition cursor-pointer  ">
-                      Login/SignUp
-                    </span>
-                    {/* /<span className="hover:text-fuchsia-600 transition cursor-pointer"> */}
-                     {/* <RiAccountCircleFill className="ml-5 " /> */}
-                    {/* </span> */}
-                  </div>
+                <Link
+                  spy={true}
+                  smooth={true}
+                  to="Login/SignUp"
+                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
+                    click ? "text-white" : "text-white"
+                  }`}
+                >
+                  Login/SignUp
                 </Link>
               </li>
             </ul>
@@ -86,14 +89,16 @@ const Nav = () => {
             <ul className="text-center text-x1 p-20">
               <li className="mb-4">
                 <div className="flex items-center">
-                  <span className="hover:text-fuchsia-600 transition cursor-pointer ml-2 font-bold">
+                  <span className="hover:text-white transition cursor-pointer ml-2 font-bold">
                     {click ? <FaHome /> : <FaHome />}
                   </span>
                   <Link
                     spy={true}
                     smooth={true}
                     to="Home"
-                    className="hover:text-fuchsia-600 transition cursor-pointer ml-2 font-bold"
+                    className={`hover:text-white hover:underline transition cursor-pointer ml-2 font-bold ${
+                      click ? "text-white" : "text-white"
+                    }`}
                   >
                     Home
                   </Link>
@@ -101,7 +106,7 @@ const Nav = () => {
               </li>
               <li className="mb-4">
                 <div className="flex items-center">
-                  <span className="hover:text-fuchsia-600 transition cursor-pointer ml-2 font-bold">
+                  <span className="hover:text-white hover:underline transition cursor-pointer ml-2 font-bold">
                     {click ? (
                       <MdOutlineTravelExplore />
                     ) : (
@@ -112,19 +117,22 @@ const Nav = () => {
                     spy={true}
                     smooth={true}
                     to=" Explore"
-                    className="hover:text-fuchsia-600 transition cursor-pointer ml-2 font-bold"
+                    className={`hover:text-white hover:underline transition cursor-pointer ml-2 font-bold ${
+                      click ? "text-white" : "text-white"
+                    }`}
                   >
                     Explore
                   </Link>
                 </div>
               </li>
               <li className="mb-4">
-              
                 <Link
                   spy={true}
                   smooth={true}
                   to="About"
-                  className="hover:text-fuchsia-600 transition cursor-pointer font-bold"
+                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
+                    click ? "text-white" : "text-white"
+                  }`}
                 >
                   About
                 </Link>
@@ -134,7 +142,9 @@ const Nav = () => {
                   spy={true}
                   smooth={true}
                   to="Login/SignUp"
-                  className="hover:text-fuchsia-600 transition cursor-pointer font-bold"
+                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
+                    click ? "text-white" : "text-fuchsia-600"
+                  }`}
                 >
                   Login/SignUp
                 </Link>
