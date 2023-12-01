@@ -27,6 +27,12 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -39,4 +45,8 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.item {
+  margin-top: 300px;
 }
