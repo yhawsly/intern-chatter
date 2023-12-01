@@ -56,8 +56,10 @@ const Main = () => {
         id="IconNavArrowLeft"
         className="mt-px w-2"
       />
-      <div className="text-xs font-['Lexend_Giga'] font-medium text-white">
-        Back
+      <div>
+        <button  className="text-xs font-['Lexend_Giga'] font-medium text-white text-center text-justify">
+          Back
+          </button>
       </div>
     </div>
   </div>
