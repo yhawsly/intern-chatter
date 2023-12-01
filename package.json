@@ -14,7 +14,12 @@
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-spinners": "^0.13.8",
+=======
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^5.3.4",
+>>>>>>> 8e0a52a (The authentication section which contains the login and registration forms)
     "tailwindcss": "^3.3.5"
   },
   "devDependencies": {
