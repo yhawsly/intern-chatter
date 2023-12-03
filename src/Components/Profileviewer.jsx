@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Main = () => {
+const Profileviewer = () => {
   return (
    <div className="backdrop-blur-[2px] bg-black/83 w-full h-[982px]">
     <div
@@ -312,4 +312,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Profileviewer
