@@ -2,7 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      poppins: ["ExtraBold Italics"],
+      inter: ["Regular"],
+    },
+    extend: {
+      colors: {
+        blue: ["#104579"],
+        yellow: ["#fobco2"],
+      },
+    },
   },
   plugins: [],
 };
