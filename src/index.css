@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .inputClass {
+    @apply text-center w-full h-12 text-black font-bold border-b-[0.4px] bg-transparent placeholder-teal-900 outline-none outline-dashed focus:outline-teal-600/10;
+  }
+}
