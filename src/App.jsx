@@ -1,5 +1,7 @@
 import "./App.css";
 import EditProfile from "./editProfile";
+import { useState } from "react";
+import Main from "./components/Main";
 
 function App() {
   return (
