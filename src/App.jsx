@@ -32,7 +32,7 @@ function App() {
         <div className="absolute w-[260px] h-[34px] top-[163px] left-[79px] bg-[#fcd4d4] rounded-[11px]" >
         <div className="absolute h-[19px] top-[10px] left-[99px] [font-family:'Inter-Regular',Helvetica] font-normal text-black text-[16px] text-center tracking-[0.19px] leading-[normal] whitespace-nowrap">
           search
-          </div>
+          </div>  
         </div>
         <div className="absolute w-[443px] h-[76px] top-[256px] left-0 bg-[#fcf8f8]" ><img className="absolute w-[101px] h-[76px] top-0 left-0 " src={mypicture} />
         <div className="absolute h-[19px] top-[15px] left-[121px] [font-family:'Inter-Regular',Helvetica] font-normal text-black text-[16px] text-center tracking-[0.16px] leading-[normal] whitespace-nowrap">
@@ -63,7 +63,7 @@ function App() {
           Sue
           </div>
           <div className="absolute h-[19px] top-[37px] left-[110px] [font-family:'Inter-Light',Helvetica] font-light text-black text-[16px] text-center tracking-[0.16px] leading-[normal] whitespace-nowrap">
-          she_is_sue
+          sue
           </div>
           <div className="absolute h-[19px] top-[32px] left-[344px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-black text-[16px] text-center tracking-[0.16px] leading-[normal] whitespace-nowrap">
           FREINDS
