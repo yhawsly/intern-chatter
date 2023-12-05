@@ -4,7 +4,7 @@ import Textinput from "./LoginComponents/Inputtext";
 import Inputpassword from "./LoginComponents/Passwordinput";
 import ShowPassword from "./LoginComponents/Showpassword";
 import SignButton from "./LoginComponents/SignupButton";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaPhone } from "react-icons/fa6";
