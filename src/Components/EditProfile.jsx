@@ -1,5 +1,5 @@
-import image from "./image/prof.png";
-import "./App.css";
+import image from "../image/prof.png";
+// import "./App.css"; Still have to import it's CSS
 function EditProfile() {
   return (
     <div className="w-[400px] h-[850px] flex flex-col justify-between items-center bg-white rounded-lg border-2 border-white text-black shadow-lg shadow-lime-950 ">
