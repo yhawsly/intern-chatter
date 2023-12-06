@@ -1,21 +1,21 @@
+import React from "react";
 import Button from "./LoginComponents/Button";
 import Textinput from "./LoginComponents/Inputtext";
 import Inputpassword from "./LoginComponents/Passwordinput";
 import ShowPassword from "./LoginComponents/Showpassword";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Email from "./LoginComponents/Emailinput";
 import Home from "../../_root/pages/Home";
 import { FaUser } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaKey } from "react-icons/fa";
-
-
+import App from "../../App.jsx";
 
 const Login = () => {
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
   // Array of user data
   const users = [
@@ -41,7 +41,7 @@ const Login = () => {
 
     if (foundUser) {
       // Navigate to the home page if the user is found
-      history.push('/home');
+      navigate('/home');
     } else {
       // Alert if user not found
       alert('User not found');
@@ -51,7 +51,7 @@ const Login = () => {
     return ( 
         <div className="flex items-cente justify-center h-screen m-[5%] md:mt-[5%]">
             
-      <div className="bg-black h-[80%] w-[50%] object-contain shadow-[0_0_10px_1px_gray] rounded-2xl absolute p-[5%] max-[100%] md:h-full">
+      <div className="bg-white h-[80%] w-[50%] object-contain shadow-[0_0_10px_1px_gray] rounded-2xl absolute p-[5%] max-[100%] md:h-full">
         <h1 className="ml-[45%] font-bold text-2xl sm:ml-[35%] md:ml-[40%] xl:text-5xl xl:ml-[35%] xl:mb-[10%] md:text-3xl md:mb-[2%] sm:mt-[5%]">LOGIN</h1>
 
         <form onSubmit={handleSubmit}>
