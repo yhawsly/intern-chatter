@@ -1,54 +1,53 @@
-import React from "react";
+import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image2 from '../img/Airport.jpg'
-import Image3 from '../img/OIP.jpg'
-import Image4 from '../img/OIP (1).jpg'
-import AI1 from '../img/AI.jpg'
-import AI2 from '../img/AI1.jpg'
-import AI3 from '../img/AI2.jpg'
+// import Image2 from '../img/Airport.jpg'
+// import Image3 from '../img/OIP.jpg'
+// import Image4 from '../img/OIP (1).jpg'
+// import AI1 from '../img/AI.jpg'
+// import AI2 from '../img/AI1.jpg'
+// import AI3 from '../img/AI2.jpg'
 
 import { Data } from './Data'; 
 import { Container,Row,Col } from "react-bootstrap";
 import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
-
-const ProfilePage = () => {
-  const ListItems = Data.map((data) => (
-    <Row key={data.id}>
-        <Col xs={12} md={6} xl={5} >
-            <div className="content-image">
-                <MDBCarousel showControls showIndicators>
-                    <MDBCarouselItem itemId={1}>
-                        <img src={data.contentImage1} className='d-block w-100' alt='...' />
-                    </MDBCarouselItem>
-                    <MDBCarouselItem itemId={2}>
-                        <img src={data.contentImage2} className='d-block w-100' alt='...' />
-                    </MDBCarouselItem>
-                    <MDBCarouselItem itemId={3}>
-                        <img src={data.contentImage3} className='d-block w-100' alt='...' />
-                    </MDBCarouselItem>
-                </MDBCarousel>
-            </div>
-
-        </Col>
-
-        <Col xs={12} md={6} xl={7}>
-                        <div className="">
-                            <div className="content-title">
-                                <h3><u>{data.contentHeader}</u></h3>
-                            </div>
-                            <br></br>
-                            <div className="content-info">
-                                <h6>{data.contentInfor}</h6>
-                                <h6 className='Content-Date'>{data.publishedDate}</h6><br/>
-                            </div>
-                            
-                        </div>
-                   </Col>
-                   
-             <hr /><br/><br/><br/>
-    </Row>
+const Profile_page = () => {
+    const ListItems = Data.map((data) => (
+        <Row key={data.id}>
+            <Col xs={12} md={6} xl={5} >
+                <div className="content-image">
+                    <MDBCarousel showControls showIndicators>
+                        <MDBCarouselItem itemId={1}>
+                            <img src={data.contentImage1} className='d-block w-100' alt='...' />
+                        </MDBCarouselItem>
+                        <MDBCarouselItem itemId={2}>
+                            <img src={data.contentImage2} className='d-block w-100' alt='...' />
+                        </MDBCarouselItem>
+                        <MDBCarouselItem itemId={3}>
+                            <img src={data.contentImage3} className='d-block w-100' alt='...' />
+                        </MDBCarouselItem>
+                    </MDBCarousel>
+                </div>
     
-));
+            </Col>
+    
+            <Col xs={12} md={6} xl={7}>
+                            <div className="">
+                                <div className="content-title">
+                                    <h3><u>{data.contentHeader}</u></h3>
+                                </div>
+                                <br></br>
+                                <div className="content-info">
+                                    <h6>{data.contentInfor}</h6>
+                                    <h6 className='Content-Date'>{data.publishedDate}</h6><br/>
+                                </div>
+                                
+                            </div>
+                       </Col>
+                       
+                 <hr /><br/><br/><br/>
+        </Row>
+        
+    ));
   return (
     <div className="sm:flex h-screen lg:overflow-hidden">
       <div className="lg:flex-1/3 lg:overflow-y-auto">
@@ -136,6 +135,6 @@ const ProfilePage = () => {
       </div>
     </div>
   );
-};
+}
 
-export default ProfilePage;
+export default Profile_page

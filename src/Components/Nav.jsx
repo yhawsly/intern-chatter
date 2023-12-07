@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { FaTimes, FaHome } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineTravelExplore } from "react-icons/md";
+import Register from "../_auth/forms/Register";
 
 const Nav = () => {
   const [click, setClick] = useState(false);
@@ -17,9 +18,9 @@ const Nav = () => {
         <div className="flex items-center flex-1">
           <span className="text-3xl font-bold flex items-center">
             <img
-              src="src/img/logo.png"
+              src="./src/images/image.png"
               alt="#"
-              style={{ marginRight: "8px", width: "100px", height: "40px" }}
+              style={{ marginRight: "8px", width: "100px", height: "55px" }}
             />
             <span>{}</span>
           </span>
@@ -67,7 +68,7 @@ const Nav = () => {
                 <Link
                   spy={true}
                   smooth={true}
-                  to="Login/SignUp"
+                  to="/register"
                   className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
                     click ? "text-white" : "text-white"
                   }`}
@@ -138,16 +139,16 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="mb-4">
-                <Link
-                  spy={true}
-                  smooth={true}
-                  to="Login/SignUp"
-                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
-                    click ? "text-white" : "text-fuchsia-600"
-                  }`}
+                {/* <Link
+                  // spy={true}
+                  // smooth={true}
+                  to="/register"
+                  // className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
+                  //   click ? "text-white" : "text-fuchsia-600"
+                  // }`}
                 >
                   Login/SignUp
-                </Link>
+                </Link> */}
               </li>
             </ul>
           )}

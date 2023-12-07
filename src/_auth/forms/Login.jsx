@@ -11,7 +11,6 @@ import Home from "../../_root/pages/Home";
 import { FaUser } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaKey } from "react-icons/fa";
-import App from "../../App.jsx";
 
 const Login = () => {
 
@@ -41,7 +40,7 @@ const Login = () => {
 
     if (foundUser) {
       // Navigate to the home page if the user is found
-      navigate('/home');
+      navigate('/profile-page');
     } else {
       // Alert if user not found
       alert('User not found');
@@ -59,7 +58,7 @@ const Login = () => {
         
         {/* Username input */}
         <div className="mb-[5%] md:mt-[2%] sm:mt-[10%] sm:mb-[5%]">
-          <label htmlFor="" className="xl:text-2xl  md:text-xl sm:text-lg">
+          <label htmlFor="#" className="xl:text-2xl  md:text-xl sm:text-lg">
             Username
           </label>
           {/* <Textinput /> */}
@@ -70,7 +69,7 @@ const Login = () => {
 
         {/* Email input */}
         <div className="mb-[5%] sm:mb-[5%]">
-          <label htmlFor="" className="xl:text-2xl md:text-xl sm:text-lg">
+          <label htmlFor="#" className="xl:text-2xl md:text-xl sm:text-lg">
             Email
           </label>
           {/* <Email /> */}
@@ -81,7 +80,7 @@ const Login = () => {
 
         {/* Password input */}
         <div className="mb-[5%] sm:mb-[5%]">
-          <label htmlFor="" className="xl:text-2xl md:text-xl sm:text-lg">
+          <label htmlFor="#" className="xl:text-2xl md:text-xl sm:text-lg">
             Password
           </label>
           {/* <Inputpassword /> */}

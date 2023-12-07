@@ -1,12 +1,13 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "/src/assets/react.svg";
 import viteLogo from "/vite.svg";
-import mypicture from "./images/fav.jpg";
-import mypicture2 from "./images/mark.jpg";
-import mypicture3 from "./images/sue.jpg";
-import mypicture4 from "./images/phid.jpg";
-import mypicture5 from "./images/rozey.jpg";
-import mypicture6 from "./images/lola.jpg";
+import mypicture from "/src/images/fav.jpg";
+import mypicture2 from "/src/images/mark.jpg";
+import mypicture3 from "/src/images/sue.jpg";
+import mypicture4 from "/src/images/phid.jpg";
+import mypicture5 from "/src/images/rozey.jpg";
+import mypicture6 from "/src/images/lola.jpg";
+
 function App() {
   const [count, setCount] = useState(0);
 

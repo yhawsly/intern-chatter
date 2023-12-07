@@ -3,12 +3,12 @@ import { Container,Row,Col } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';  //using boostrap: npm install react-bootstrap bootstrap
 import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit'; // using carousel npm install mdb-react-ui-kit or yarn add mdb-react-ui-kit
 
-import Image2 from '../images/Airport.jpg'
-import Image3 from '../images/OIP.jpg'
-import Image4 from '../images/OIP (1).jpg'
-import AI1 from '../images/AI.jpg'
-import AI2 from '../images/AI1.jpg'
-import AI3 from '../images/AI2.jpg'
+import Image2 from '/src/img/Airport.jpg'
+import Image3 from '/src/img/OIP.jpg'
+import Image4 from '/src/img/OIP (1).jpg'
+import AI1 from '/src/img/AI.jpg'
+import AI2 from '/src/img/AI1.jpg'
+import AI3 from '/src/img/AI2.jpg'
 
 
 import { Data } from './Data'; 
