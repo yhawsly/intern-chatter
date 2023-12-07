@@ -3,7 +3,7 @@ import React from "react";
 const Cards = () => {
   return (
     <>
-      <div className="w-screen h-16 bg-slate-200 flex justify-center items-center"></div>
+      {/* <div className="w-screen h-16 bg-slate-200 flex justify-center items-center"></div> */}
       <div className=" mb-3 ml-28">
         <span className=" mt-3 sr-only">Search</span>
         <span className=" inset-y-0 left-0 flex items-center pl-2">
@@ -17,11 +17,12 @@ const Cards = () => {
         />
       </div>
 
-      <div className="h-30 max-w-7xl bg-slate-400 justify-between mt-17 mx-auto rounded-lg items-center flex flex-row">
+      <div className="h-30 max-w-7xl bg-slate-100 justify-between mt-17 mx-auto rounded-lg flex flex-row ">
         <img className="  object-fill" src="src/images/bannerpic.jpeg" alt="" />
-        <div className="mr-20 font-poppins font-extrabold text-5xl text-white underline">
-          Isreal and Hamas War
-          <h3 className="font-inter text-xl ">
+        
+        <div className="font-poppins font-extrabold text-4xl text-gray-600  m-auto h-64 ">
+          <p className="underline text-center">  Isreal and Hamas War</p>
+          <h3 className="font-inter text-xl mt-4 flex justify-center text-center ">
             Amid soaring debts, US continues to back Isreal <br /> Isreal raids
             Hospital in Gaza in 'Targeted Operation' <br />
             Isreal begins ground operation in Gaza <br /> Release of some
