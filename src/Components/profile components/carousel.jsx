@@ -3,11 +3,11 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container,Row,Col } from "react-bootstrap";
 import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
-import Image2 from '../images/Airport.jpg'
-import AI2 from '../images/AI1.jpg'
-import Basketball2 from '../images/bas2.jpg'
-import Football1  from '../images/football1.webp'
-import Image3 from '../images/OIP.jpg'
+import Image2 from '/src/img/Airport.jpg'
+import AI2 from '/src/img/AI1.jpg'
+import Basketball2 from '/src/img/bas2.jpg'
+import Football1  from '/src/img/football1.webp'
+import Image3 from '/src/img/OIP.jpg'
 // you can add more images 
 
 function Carousels() {
