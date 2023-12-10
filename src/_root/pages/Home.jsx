@@ -3,6 +3,7 @@ import Nav from '../../Components/Nav';
 import Cards from '../../components/Cards';
 import Footer  from '../../components/Footer';
 
+
 const Home = () => {
   return (
     <main>

@@ -17,7 +17,8 @@ import Login from "./_auth/forms/Login.jsx";
 import Profile_page from './Components/profile components/Profile_page.jsx';
 import Blogcontent from './Components/profile components/Blogcontent.jsx';
 import Carousel from './Components/profile components/carousel.jsx';
-import followerlist from './Components/followerlist.jsx';
+import followerlist from '/src/Components/Followerlist.jsx';
+import Explore from "./_root/pages/Explore.jsx";
 
 // import Register from "./Register.jsx";
 
@@ -48,6 +49,7 @@ function App() {
         <Route path="/profile-page" element={<Profile_page />} />
         <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="/follower-list" element={<followerlist />} />
+        <Route path="/explore" element={<Explore />} />
 
       </Routes> 
      </main>

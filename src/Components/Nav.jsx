@@ -13,29 +13,28 @@ const Nav = () => {
   };
 
   return (
-    <nav style={{ backgroundColor: "#009A9D" }}>
-      <div className="flex justify-between z-50 text-white lg:py-5 px-20 py-4">
+    <>
+    <nav style={{ backgroundColor: "#fff" }} className="flex justify-between h-32 w-screen">
+      {/* <div className="flex justify-between z-5 lg:py-5 px-20 py-4"> */}
+      {/* Icon */}
         <div className="flex items-center flex-1">
-          <span className="text-3xl font-bold flex items-center">
             <img
-              src="./src/images/image.png"
+              src="./src/images/favicon.png"
               alt="#"
-              style={{ marginRight: "8px", width: "100px", height: "55px" }}
+              style={{ width: "110px", height: "50px" }}
+              className="ml-2 sm:ml-12"
             />
-            <span>{}</span>
-          </span>
         </div>
-        <div className="lg:flex md:flex lg:flex-1 items-center justify-end font-normal hidden">
-          <div className="flex-10">
-            <ul className="flex gap-8 mr-16 text-[16px]">
+
+        {/* <div className="lg:flex md:flex lg:flex-1 items-center justify-end font-normal"> */}
+          <div className="flex items-center mr-4">
+            <ul className="flex  text-[16px] sm:gap-10 md:gap-10 lg:gap-10 xl:gap-10 hover:text-[#0A31BC]">
               <li>
                 <Link
                   spy={true}
                   smooth={true}
-                  to="Home"
-                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
-                    click ? "text-white" : "text-white"
-                  }`}
+                  to="/home"
+                  className=" focus:text-[#0A31BC] active:text-[#0A31BC] hover:text-[#0A31BC] transition cursor-pointer font-bold text-black hidden sm:block md:block lg:block xl:block sm:hover:text-[#0A31BC]"
                 >
                   Home
                 </Link>
@@ -44,121 +43,44 @@ const Nav = () => {
                 <Link
                   spy={true}
                   smooth={true}
-                  to="Explore"
-                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
-                    click ? "text-white" : "text-white"
-                  }`}
+                  to="/explore"
+                  className=" focus:text-[#0A31BC] active:text-[#0A31BC] hover:text-[#0A31BC] transition cursor-pointer font-bold text-black hidden sm:block md:block lg:block xl:block sm:hover:text-[#0A31BC]"
                 >
                   Explore
                 </Link>
               </li>
-              <li>
-                <Link
-                  spy={true}
-                  smooth={true}
-                  to="About"
-                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
-                    click ? "text-white" : "text-white"
-                  }`}
-                >
-                  About
-                </Link>
-              </li>
+             
               <li>
                 <Link
                   spy={true}
                   smooth={true}
                   to="/register"
-                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
-                    click ? "text-white" : "text-white"
-                  }`}
+                  className="focus:text-[#0A31BC] active:text-[#0A31BC] hover:text-[#0A31BC] transition cursor-pointer font-bold text-[#0A31BC]  border-2 p-2 border-[#0A31BC] rounded sm:mr-12  "
                 >
-                  Login/SignUp
+                SignUp
                 </Link>
               </li>
             </ul>
-          </div>
+          {/* </div> */}
         </div>
 
-        <div
-          className={`lg:hidden ${
-            click ? "flex" : "hidden"
-          } items-center justify-center absolute top-16 w-full left-0 right-0 bg-slate-900`}
-          style={{ backgroundColor: "#009A9D" }}
-        >
-          {click && (
-            <ul className="text-center text-x1 p-20">
-              <li className="mb-4">
-                <div className="flex items-center">
-                  <span className="hover:text-white transition cursor-pointer ml-2 font-bold">
-                    {click ? <FaHome /> : <FaHome />}
-                  </span>
-                  <Link
-                    spy={true}
-                    smooth={true}
-                    to="Home"
-                    className={`hover:text-white hover:underline transition cursor-pointer ml-2 font-bold ${
-                      click ? "text-white" : "text-white"
-                    }`}
-                  >
-                    Home
-                  </Link>
-                </div>
-              </li>
-              <li className="mb-4">
-                <div className="flex items-center">
-                  <span className="hover:text-white hover:underline transition cursor-pointer ml-2 font-bold">
-                    {click ? (
-                      <MdOutlineTravelExplore />
-                    ) : (
-                      <MdOutlineTravelExplore />
-                    )}
-                  </span>
-                  <Link
-                    spy={true}
-                    smooth={true}
-                    to=" Explore"
-                    className={`hover:text-white hover:underline transition cursor-pointer ml-2 font-bold ${
-                      click ? "text-white" : "text-white"
-                    }`}
-                  >
-                    Explore
-                  </Link>
-                </div>
-              </li>
-              <li className="mb-4">
-                <Link
-                  spy={true}
-                  smooth={true}
-                  to="About"
-                  className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
-                    click ? "text-white" : "text-white"
-                  }`}
-                >
-                  About
-                </Link>
-              </li>
-              <li className="mb-4">
-                {/* <Link
-                  // spy={true}
-                  // smooth={true}
-                  to="/register"
-                  // className={`hover:text-white hover:underline transition cursor-pointer font-bold ${
-                  //   click ? "text-white" : "text-fuchsia-600"
-                  // }`}
-                >
-                  Login/SignUp
-                </Link> */}
-              </li>
-            </ul>
-          )}
-        </div>
-
-        <button className="block sm:hidden transition" onClick={handleClick}>
+               {/* <button className="block sm:hidden transition" onClick={handleClick}>
           {click ? <FaTimes /> : <IoMdMenu />}
-        </button>
-      </div>
+        </button> */}
+      {/* </div> */}
     </nav>
+    <div className="w-screen h-14 bg-[#0a31bc1b] flex justify-between items-center">
+    <img src="./src/images/navicon-round.png" className="w-8 h-8 ml-4 sm:ml-10 md:ml-10 lg:ml-10 xl:ml-10 "></img>
+      <p className="font-bold text-xl  sm:hidden md:hidden lg:hidden xl:hidden">Explore</p>
+      <p className="font-bold text-xl sm:text-lg text-[#0A31BC] hidden sm:hidden md:hidden lg:block xl:block  lg:hover:cursor-pointer">WORLD</p>
+      <p className="font-bold text-xl sm:text-lg text-[#0A31BC] hidden sm:hidden md:hidden lg:block xl:block lg:hover:cursor-pointer">BUSSINESS</p>
+      <p className="font-bold text-xl sm:text-lg text-[#0A31BC] hidden sm:hidden md:hidden lg:block xl:block lg:hover:cursor-pointer">TECHNOLOGY</p>
+      <p className="font-bold text-xl sm:text-lg text-[#0A31BC] hidden sm:hidden md:hidden lg:block xl:block lg:hover:cursor-pointer">ENTERTAINMENT</p>
+      <p className="font-bold text-xl sm:text-lg text-[#0A31BC] hidden sm:hidden md:hidden lg:block xl:block lg:hover:cursor-pointer">SPORTS</p>
+      <p className="font-bold text-xl sm:text-lg text-[#0A31BC] hidden sm:hidden md:hidden lg:block xl:block lg:hover:cursor-pointer">TRAVEL</p>
+      <img src="./src/images/android-search.png" className="w-8 h-8 mr-4 sm:block md:block lg:mr-10 xl:mr-10 lg:hover:cursor-pointer "></img>
+    </div>
+    </>
   );
 };
 
