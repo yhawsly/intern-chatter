@@ -3,8 +3,31 @@ import React from 'react'
 
 const Profileviewer = () => {
   return (
-   <div className="backdrop-blur-[2px] bg-black/83 w-full h-[982px]">
-    <div
+  //  <div className="backdrop-blur-[2px] bg-black/83 w-full h-[982px]">
+    <div className='w-screen h-screen'>
+    <h1 className='text-4xl font-bold p-10 text-[#0A31BC]'>Viewers</h1>
+    <div className='bg-white h-[20%] w-[40%] shadow-lg flex rounded'>
+      <div className='h-12 w-12 rounded-full bg-slate-500'>
+      <img
+            className=" rounded-full"
+            src="src/images/pic7.png"
+            alt=""
+          />
+      </div>
+      <div className=' w-[90%] h-[80%]'>
+        <h2 className=' pl-4 pt-4 pb-2 text-2xl font-bold'>Larry Leon Lingston</h2>
+        <p className='pl-4'>
+            Passionate news navigator with 10 years in journalism. I uncover stories
+              that transcend headlines, offering a front-row seat to the theater of
+              life. 
+        </p>
+        <p className='text-sm text-slate-600'>
+          Following
+        </p>
+      
+      </div>
+    </div>
+        {/* <div
   id="ViewlistRoot"
   className="overflow-hidden bg-white flex flex-col gap-0 w-full items-start rounded-br-lg rounded-bl-lg"
 >
@@ -306,9 +329,10 @@ const Profileviewer = () => {
     </div>
   </div>
 </div>
-
+ */}
 
    </div>
+  //  </div>
   )
 }
 

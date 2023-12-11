@@ -35,7 +35,7 @@ const Login = () => {
 
     // Check if the entered credentials match any user
     const foundUser = users.find(
-      (user) => user.name === name && user.email === email && user.password === password
+      (user) => user.name === name || user.email === email && user.password === password
     );
 
     if (foundUser) {
@@ -48,32 +48,24 @@ const Login = () => {
   };
 
     return ( 
-        <div className="flex items-cente justify-center h-screen m-[5%] md:mt-[5%]">
+  <div className="f bg-white flex justify-center items-center h-screen lg:flex ">
             
-      <div className="bg-white h-[80%] w-[50%] object-contain shadow-[0_0_10px_1px_gray] rounded-2xl absolute p-[5%] max-[100%] md:h-full">
-        <h1 className="ml-[45%] font-bold text-2xl sm:ml-[35%] md:ml-[40%] xl:text-5xl xl:ml-[35%] xl:mb-[10%] md:text-3xl md:mb-[2%] sm:mt-[5%]">LOGIN</h1>
-
+      <div className="bg-white h-[80%] w-[90%] object-contain  flex flex-col items-center lg:w-[50%] lg:h-full lg:flex lg:flex-col ">
+        {/* <h1 className="ml-[45%] font-bold text-2xl sm:ml-[35%] md:ml-[40%] xl:text-5xl xl:ml-[35%] xl:mb-[10%] md:text-3xl md:mb-[2%] sm:mt-[5%]">LOGIN</h1> */}
+        <img src="src/images/favicon.png" alt="" className="mt-20 w-48 h-20 lg:mt-24" />
+        <h1 className="text-base text-[#0A31BC] font-bold mt-2">Log into your account</h1>
         <form onSubmit={handleSubmit}>
 
         
         {/* Username input */}
-        <div className="mb-[5%] md:mt-[2%] sm:mt-[10%] sm:mb-[5%]">
-          <label htmlFor="#" className="xl:text-2xl  md:text-xl sm:text-lg">
-            Username
-          </label>
-          {/* <Textinput /> */}
-          <FaUser className="absolute mt-[1.5%] ml-[2%] text-lg"/>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="border-2 hover:border-[#056C80] h-10 w-[100%] rounded-xl bg-gray-200 pl-[8%] p-auto" required/>
-
-        </div>
 
         {/* Email input */}
-        <div className="mb-[5%] sm:mb-[5%]">
+        <div className="mb-[5%] mt-2 sm:mb-[5%]">
           <label htmlFor="#" className="xl:text-2xl md:text-xl sm:text-lg">
             Email
           </label>
           {/* <Email /> */}
-          <HiOutlineMail className="absolute mt-[1.5%] ml-[2%] text-lg"/>
+          <HiOutlineMail className="absolute mt-2 ml-2 text-lg"/>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="border-2 hover:border-[#056C80] h-10 w-[100%] rounded-xl bg-gray-200 pl-[8%] p-auto" required/>
 
         </div>
@@ -84,13 +76,12 @@ const Login = () => {
             Password
           </label>
           {/* <Inputpassword /> */}
-          <FaKey className="absolute mt-[1.5%] ml-[2%] text-lg" />
+          <FaKey className="absolute mt-2 ml-2 text-lg" />
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="border-2 hover:border-[#056C80] h-10 w-[100%] rounded-xl bg-gray-200 pl-[8%] p-auto" required/>
 
           <div>
             <ShowPassword />
           </div>
-          <Link to="/register" className="text-[#056C80] font-bold text-xs xl:text-lg md:text-xs">REGISTER</Link>
         </div>
 
         
@@ -99,21 +90,26 @@ const Login = () => {
         {/* <Button /> */}
                 {/* Replace the '/home' with where the user can see his/her posts and followers and likes and post stuff */}
 
-        <button type="submit" className="bg-[#056C80] tracking-widest text-white py-[2%] px-[1%] rounded-xl w-[60%] md:w-[70%] md:ml-[15%] ml-[20%]">LOGIN</button>
-
+         <button type="submit" className="bg-[#0A31BC] tracking-widest text-white py-[2%] px-[1%] rounded-xl w-[60%] md:w-[70%] md:ml-[15%] ml-[20%]">Submit</button>
+        <p className="text-center mt-2"> Don't have an account?</p>
         </div>
 
-        <div className="justify-center ml-[35%] mt-[1%] text-sm sm:ml-[25%] xl:text-xl md:text-xl">
-          <div>
-            Don't have an account?
-          </div>
-          <div>
-            <Link to="/register" className="text-[#056C80] ml-[15%]">
+          <div className="">
+     
+           
+          
+          <div className="flex">
+            <Link to="/register" className=" text-[#0A31BC] m-auto">
               Sign up
             </Link>
           </div>
         </div>
         </form>
+      </div>
+      {/* picture Side */}
+      <div className="hidden sm:bg-[#0A31BC] lg:block lg:w-[50%] lg:h-full">
+        <img src="/src/images/back.jpg" className="lg:h-full lg:relative "></img>
+        <p className="text-white text-[50px] font-bold lg:absolute lg:top-48 lg:right-60">Stay Informed <br></br>with latest new <br></br> Stories and <br></br>Discover more</p>
       </div>
     </div>
      );
