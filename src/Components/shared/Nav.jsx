@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaTimes, FaHome } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineTravelExplore } from "react-icons/md";
-import Register from "../_auth/forms/Register";
+import Register from "../../_auth/forms/Register";
 
 const Nav = () => {
   const [click, setClick] = useState(false);

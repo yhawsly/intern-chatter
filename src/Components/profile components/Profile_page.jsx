@@ -1,15 +1,19 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
+import { useState } from 'react';
 // import Image2 from '../img/Airport.jpg'
 // import Image3 from '../img/OIP.jpg'
 // import Image4 from '../img/OIP (1).jpg'
 // import AI1 from '../img/AI.jpg'
 // import AI2 from '../img/AI1.jpg'
 // import AI3 from '../img/AI2.jpg'
+import Followerlist from '../followerlist';
 
 import { Data } from './Data'; 
 import { Container,Row,Col } from "react-bootstrap";
 import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
+import Profileviewer from '../Profileviewer';
 const Profile_page = () => {
     const ListItems = Data.map((data) => (
         <Row key={data.id}>
@@ -48,7 +52,14 @@ const Profile_page = () => {
         </Row>
         
     ));
+    const [showViewers, setShowViewers] = useState(false);
+
+    const [publishModel,setOpenModel] = useState(false); 
+
+    const [showFollowers, setShowFollowers] = useState(false);
+
   return (
+    <>
     <div className="sm:flex h-screen lg:overflow-hidden">
       <div className="lg:flex-1/3 lg:overflow-y-auto">
         <div className="w-[363.30px] h-[921.90px] relative">
@@ -59,17 +70,35 @@ const Profile_page = () => {
               src="https://via.placeholder.com/218x218"
               alt="Profile"
             />
+            
             {/* Add similar tags for other profile elements */}
           </div>
+          <Link
+                  spy={true}
+                  smooth={true}
+                  to="/edit-profile"
+  
+                >
+                <p className='absolute top-[260px] left-[260px] font-medium text-[#0A31BC] '>Edit Profile</p>
+                </Link>
+         
+          {/* <p className='absolute top-[260px] left-[260px] font-medium '>Edit Profile</p> */}
+       
+         
           <p className="font-bold  text-black text-5xl pl-4 mt-5 absolute top-[320px] left-[63.25px]">Elyn Bliss</p>
           <span className="font-normal text-black  text-lg pl-8 absolute top-[420.20px] left-[93.25px]">@elynbliss</span>
-          <button className="bg-009A9D text-white px-5 py-1 rounded-lg absolute top-[460px] left-[125px]">
+          {/* <button className="bg-009A9D text-white px-5 py-1 rounded-lg absolute top-[460px] left-[125px]">
               Follow
-            </button>
+            </button> */}
           <div className="pl-[15px] pr-[15px] pt-[8.40px] pb-[0px] left-0 top-[500px] absolute justify-end items-center inline-flex">
             <div className="w-[327.50px] h-[42.48px] relative">
               <div className="left-0 top-[17.48px] absolute text-black text-[21px] font-medium font-roboto">
-                Followers
+                                  <button
+                    className='w-10 h-10 lg:w-20 lg:h-10 bg-transparent text-black text-base'
+                    onClick={() => setShowFollowers(!showFollowers)}
+                  >
+                    {showFollowers ? 'Hide Followers' : 'Followers'}
+                  </button>
               </div>
               <div className="left-[123.25px] top-[17.48px] absolute text-black text-[21px] font-medium font-roboto">
                 Following
@@ -86,7 +115,21 @@ const Profile_page = () => {
               <div className="left-[246.50px] top-[17.48px] absolute">
                 <span className="text-black text-[21px] font-normal font-roboto"> </span>
                 <span className="text-black text-[21px] font-medium font-roboto">
-                  Viewers
+                {/* <Link spy={true} smooth={true} to="/viewer">
+                Viewers
+                </Link> */}
+                <button
+          className='w-10 h-10 lg:w-20 lg:h-10 bg-transparent text-black text-base   '
+          onClick={() => setShowViewers(!showViewers)}
+        >
+          {showViewers ? 'Hide Viewers' : 'Viewers'}
+        </button>
+                {/* <button className=' w-24 h-12 font-bold bg-blue-500 text-zinc-200 rounded-xl  ' onClick={() => {
+                  setOpenModel(true);
+                }}>
+                  Viewers</button>
+                {publishModel && <Followerlist closeModel ={setOpenModel} />} */}
+                 
                 </span>
               </div>
             </div>
@@ -108,32 +151,59 @@ const Profile_page = () => {
               joined 20th July 2020
             </div>
             {/* Add similar tags for other images */}
-            <div className="left-[22.05px] top-[369.20px] absolute">
+            {/* <div className="left-[22.05px] top-[369.20px] absolute">
               <span className="text-black text-[21px] font-normal font-roboto">
                 Follow
               </span>
               <span className="text-black text-base font-normal font-roboto"> </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       <div className="lg:flex-1 h-full lg:overflow-y-auto relative">
         {/* Content for the second div */}
-        <h3 className="font-bold text-3xl pl-4 mt-5 absolute left-[22.05px] top-[50px] lg:left-[22.05px] lg:top-[0px]">Posted Articles <br /><span className="pl-20 mt-5">6</span><hr /> </h3>
-        <p className="pl-4 mt-5 absolute left-[22.05px] top-[70px] lg:left-[22.05px] lg:top-[100px]"> 
-        <>
-        <section>
+  
+        <h3 className="font-bold text-3xl pl-4 mt-5 absolute left-[22.05px] top-[50px] lg:left-[22.05px] lg:top-[0px] ">Posted Articles <br />
+        <span className="pl-20 mt-5">6</span><hr /> </h3>
+        <button className='w-20 h-20 lg:w-32 lg:h-14 bg-[#0A31BC] text-white font-medium lg:hover:bg-[#0A31BC] lg:hover:text-white lg:p-[10px] border-2 lg:border-[#0A31BC] text-[#0A31BC] bottom-36 right-5 z-1 fixed lg:right-12 lg:top-12 lg:rounded-xl lg:absolute rounded-full '>Post article</button>
+        
+        
+        
+        <p className="pl-4 mt-5 absolute left-[22.05px] top-[70px] lg:left-[22.05px] lg:top-[100px]">
+
+        {showFollowers ? (
+  <div>
+    <h3>Followers Content</h3>
+    {/* Render your followers content or component here */}
+    <Followerlist />
+  </div>
+):showViewers ? (
+                // Render the viewers content here
+                <div>
+                  <h3>Viewers Content</h3>
+                  <Profileviewer />
+                </div>
+              ) : (
+                // Render the articles content here
+                <div className='content text-md'>
+                  {ListItems}
+                </div>
+              )}
+
+        {/* <section>
             <Container className=''>
-                <div className='content'>
+                <div className='content text-md'>
                     {ListItems}
                 </div>
             </Container>
         </section>
-        </>
+         */}
         </p>
+        </div>
       </div>
-    </div>
+
+    </>
   );
 }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Menu from '/src/Components/explore component/Menu.jsx';
 import NewsGrid from '/src/Components/explore component/NewsGrid.jsx';
-import Nav from '../../Components/Nav';
+import Nav from '../../Components/shared/Nav';
 
 const Explore = () => {
   const [items, setItems] = useState([]);
