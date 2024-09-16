@@ -1,0 +1,49 @@
+.notification {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  transition: opacity 0.3s ease; /* Optional: Add a transition effect for smoother hiding */
+}
+
+.notification.follow {
+  background-color: #dff0d8; /* Green for follow notifications */
+}
+
+.notification.like {
+  background-color: #d9edf7; /* Blue for like notifications */
+}
+
+.notification.comment {
+  background-color: #f2dede; /* Red for comment notifications */
+}
+
+.dropdown-content {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #fff;
+}
+
+.notification.visible {
+  opacity: 1;
+}
+
+.notification.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #888;
+}
